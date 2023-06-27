@@ -21,13 +21,6 @@ export class HomePage {
 
   excluir(){}
 
-
-
-
-
-
-	
-
 	exibir(numero: number) {
 		// usamos this para acessar a variável que foi criada acima
 		this.resultado = numero * numero;
