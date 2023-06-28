@@ -1,15 +1,133 @@
 <ion-content [fullscreen]="true">
 
+  
+  
   <ion-row class="ion-justify-content-center">
     <ion-col size="12" size-lg="3">
 
       <ion-row>
+        <ion-col>
+          <ion-label >{{ this.resultado }}</ion-label>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
         <ion-col >
-          <ion-button expand="full">C</ion-button>
+          <ion-button expand="full" (click)="operador()">C</ion-button>
         </ion-col>
     
         <ion-col >
-          <ion-button expand="full">+/-</ion-button>
+          <ion-content [fullscreen]="true">
+
+  
+  
+            <ion-row class="ion-justify-content-center">
+              <ion-col size="12" size-lg="3">
+          
+                <ion-row>
+                  <ion-col>
+                    <ion-label >{{ this.resultado }}</ion-label>
+                  </ion-col>
+                </ion-row>
+          
+                <ion-row>
+                  <ion-col >
+                    <ion-button expand="full" (click)="limpar()">C</ion-button>
+                  </ion-col>
+              
+                  <ion-col >
+                    <ion-button expand="full">+/-</ion-button>
+                  </ion-col>
+              
+                  <ion-col >
+                    <ion-button expand="full" (click)="delete()"><ion-icon name="backspace-outline"></ion-icon></ion-button>
+                  </ion-col>
+              
+                  <ion-col >
+                    <ion-button expand="full" (click)="exibir('/')">/</ion-button>
+                  </ion-col>
+                </ion-row>
+              
+              
+                <ion-row>
+                  <ion-col >
+                    <ion-button expand="full" (click)="exibir('7')">7</ion-button>
+                  </ion-col>
+              
+                  <ion-col >
+                    <ion-button expand="full"(click)="exibir('8')">8</ion-button>
+                  </ion-col>
+              
+                  <ion-col >
+                    <ion-button expand="full" (click)="exibir('9')" >9</ion-button>
+                  </ion-col>
+              
+                  <ion-col >
+                    <ion-button expand="full"(click)="exibir('*')">*</ion-button>
+                  </ion-col>
+             
+                </ion-row>
+              
+                <ion-row>
+                  <ion-col >
+                    <ion-button expand="full" (click)="exibir('4')">4</ion-button>
+                  </ion-col>
+              
+                  <ion-col >
+                    <ion-button expand="full" (click)="exibir('5')">5</ion-button>
+                  </ion-col>
+              
+                  <ion-col >
+                    <ion-button expand="full" (click)="exibir('6')">6</ion-button>
+                  </ion-col>
+              
+                  <ion-col >
+                    <ion-button expand="full" (click)="exibir('-')">-</ion-button>
+                  </ion-col>
+                </ion-row>
+              
+              
+                <ion-row>
+                  <ion-col >
+                    <ion-button expand="full" (click)="exibir('1')">1</ion-button>
+                  </ion-col>
+              
+                  <ion-col >
+                    <ion-button expand="full" (click)="exibir('2')">2</ion-button>
+                  </ion-col>
+              
+                  <ion-col >
+                    <ion-button expand="full" (click)="exibir('3')">3</ion-button>
+                  </ion-col>
+              
+                  <ion-col >
+                    <ion-button expand="full" (click)="exibir('+')">+</ion-button>
+                  </ion-col>
+                </ion-row>
+              
+               
+                <ion-row>
+                  <ion-col >
+                    <ion-button expand="full"(click)="exibir('0')" >0</ion-button>
+                  </ion-col>
+              
+                  <ion-col >
+                    <ion-button expand="full" (click)="exibir('%')">%</ion-button>
+                  </ion-col>
+          
+                <ion-col >
+                    <ion-button expand="full"(click)="calcular()">=</ion-button>
+                  </ion-col>
+          
+                </ion-row>
+              
+          
+              </ion-col>
+            </ion-row>
+          
+           
+          </ion-content>
+           <ion-button expand="full">+/-</ion-button>
         </ion-col>
     
         <ion-col >
@@ -17,75 +135,81 @@
         </ion-col>
     
         <ion-col >
-          <ion-button expand="full">/</ion-button>
+          <ion-button expand="full" (click)="definirPasso()">/</ion-button>
         </ion-col>
       </ion-row>
     
     
       <ion-row>
         <ion-col >
-          <ion-button expand="full">7</ion-button>
+          <ion-button expand="full" (click)="exibir('7')">7</ion-button>
         </ion-col>
     
         <ion-col >
-          <ion-button expand="full">8</ion-button>
+          <ion-button expand="full"(click)="exibir('8')">8</ion-button>
         </ion-col>
     
         <ion-col >
-          <ion-button expand="full" >9</ion-button>
+          <ion-button expand="full" (click)="exibir('9')" >9</ion-button>
         </ion-col>
     
         <ion-col >
-          <ion-button expand="full">*</ion-button>
+          <ion-button expand="full"(click)="definirPasso()">*</ion-button>
         </ion-col>
+   
       </ion-row>
     
       <ion-row>
         <ion-col >
-          <ion-button expand="full">4</ion-button>
+          <ion-button expand="full" (click)="exibir('4')">4</ion-button>
         </ion-col>
     
         <ion-col >
-          <ion-button expand="full">5</ion-button>
+          <ion-button expand="full" (click)="exibir('5')">5</ion-button>
         </ion-col>
     
         <ion-col >
-          <ion-button expand="full" >6</ion-button>
+          <ion-button expand="full" (click)="exibir('6')">6</ion-button>
         </ion-col>
     
         <ion-col >
-          <ion-button expand="full">-</ion-button>
+          <ion-button expand="full" (click)="definirPasso()">-</ion-button>
         </ion-col>
       </ion-row>
     
     
       <ion-row>
         <ion-col >
-          <ion-button expand="full">1</ion-button>
+          <ion-button expand="full" (click)="exibir('1')">1</ion-button>
         </ion-col>
     
         <ion-col >
-          <ion-button expand="full">2</ion-button>
+          <ion-button expand="full" (click)="exibir('2')">2</ion-button>
         </ion-col>
     
         <ion-col >
-          <ion-button expand="full" >3</ion-button>
+          <ion-button expand="full" (click)="exibir('3')">3</ion-button>
         </ion-col>
     
         <ion-col >
-          <ion-button expand="full">+</ion-button>
+          <ion-button expand="full" (click)="definirPasso()">+</ion-button>
         </ion-col>
       </ion-row>
     
      
       <ion-row>
         <ion-col >
-          <ion-button expand="full">0</ion-button>
+          <ion-button expand="full"(click)="exibir('0')" >0</ion-button>
         </ion-col>
     
         <ion-col >
-          <ion-button expand="full">=</ion-button>
+          <ion-button expand="full"(click)="definirPasso()">%</ion-button>
         </ion-col>
+
+      <ion-col >
+          <ion-button expand="full"(click)="calcular()">=</ion-button>
+        </ion-col>
+
       </ion-row>
     
 
