@@ -11,23 +11,48 @@ import { IonicModule } from '@ionic/angular';
 })
 export class HomePage {
 
-  resultado: number = 0;
+  resultado: string = "";
+  num: string = "";
+
    
-  soma(){}
 
-  multiplicar(){}
-
-  divisao(){}
-
-  excluir(){}
-
-	exibir(numero: number) {
+	exibir(numero: string) {
 		// usamos this para acessar a variável que foi criada acima
-		this.resultado = numero * numero;
+    this.num = this.resultado;
+    this.resultado = this.num + numero;
 
-		Number(this.resultado)
 	}
 
+  limpar(){
+    this.resultado = ""
+  }
+
+
+  calcular(){
+    
+    
+    this.num = this.resultado;
+    this.resultado = eval(this.num);
+    // if(this.operador = '+'){
+    //   this.resultado = Number(this.valor1)+Number(this.valor2)
+    // }
+    // if(this.operador = '-'){
+    //     this.resultado = Number(this.valor1)-Number(this.valor2)
+    // }
+    // if(this.operador = '*'){
+    //   this.resultado = Number(this.valor1)*Number(this.valor2)
+    // }
+    // else
+    // if(this.operador = '/'){
+    //   this.resultado = Number(this.valor1)/Number(this.valor2)
+    // }
+    // if(this.operador = '%'){
+    //   this.resultado = (Number(this.valor1)/100)*Number(this.valor2)
+    // }
+
+  }
 }
+
+
 
 
