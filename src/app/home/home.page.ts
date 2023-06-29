@@ -37,8 +37,6 @@ export class HomePage {
     // ou seja para a calculadora quando ela pegar o primeiro valor e depois o operador, ele ira realizar sua função
 
     calcular(){
-      
-      
       this.valor = this.resultado;
       this.resultado = eval(this.valor);
 
