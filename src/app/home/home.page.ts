@@ -9,48 +9,58 @@ import { IonicModule } from '@ionic/angular';
   standalone: true,
   imports: [IonicModule, CommonModule],
 })
+
 export class HomePage {
 
-  resultado: string = "";
-  num: string = "";
+    // Criando as variaveis para dar inicio a execução
+    // Para rodar a calculadora vamos iniciar atribuindo as variaveis String 
 
-   
+  resultado: string = ""; 
+  valor: string = "";
+  
+     
+    // A função exibir, recebe os numeros e operadores inseridos no html
+    exibir(numero: string) {
+      // O this é usado para pegar uma variavel que esta fora da função
+      this.valor = this.resultado;
+      this.resultado = this.valor + numero;
+  
+    }
+  
+    // Na função limpar o resultado passa a ser vazio
 
-	exibir(numero: string) {
-		// usamos this para acessar a variável que foi criada acima
-    this.num = this.resultado;
-    this.resultado = this.num + numero;
+    limpar(){
+      this.resultado = ""
+    }
+  
+    // Para calcular usamos o eval para realizar as expressoes com string
+    // ou seja para a calculadora quando ela pegar o primeiro valor e depois o operador, ele ira realizar sua função
 
-	}
+    calcular(){
+      
+      
+      this.valor = this.resultado;
+      this.resultado = eval(this.valor);
 
-  limpar(){
-    this.resultado = ""
-  }
 
+      // if(this.operador = '+'){
+      //   this.resultado = Number(this.valor1)+Number(this.valor2)
+      // }
+      // if(this.operador = '-'){
+      //     this.resultado = Number(this.valor1)-Number(this.valor2)
+      // }
+      // if(this.operador = '*'){
+      //   this.resultado = Number(this.valor1)*Number(this.valor2)
+      // }
+      // else
+      // if(this.operador = '/'){
+      //   this.resultado = Number(this.valor1)/Number(this.valor2)
+      // }
+      // if(this.operador = '%'){
+      //   this.resultado = (Number(this.valor1)/100)*Number(this.valor2)
+      // }
+    }
 
-  calcular(){
-    
-    
-    this.num = this.resultado;
-    this.resultado = eval(this.num);
-    // if(this.operador = '+'){
-    //   this.resultado = Number(this.valor1)+Number(this.valor2)
-    // }
-    // if(this.operador = '-'){
-    //     this.resultado = Number(this.valor1)-Number(this.valor2)
-    // }
-    // if(this.operador = '*'){
-    //   this.resultado = Number(this.valor1)*Number(this.valor2)
-    // }
-    // else
-    // if(this.operador = '/'){
-    //   this.resultado = Number(this.valor1)/Number(this.valor2)
-    // }
-    // if(this.operador = '%'){
-    //   this.resultado = (Number(this.valor1)/100)*Number(this.valor2)
-    // }
-
-  }
 }
 
 

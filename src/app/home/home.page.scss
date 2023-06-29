@@ -1,27 +1,20 @@
-#container {
-  text-align: center;
+// *{
+//   outline: 1px solid black;
+// }
 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+.tema{
+  color: rgb(255, 255, 255);
+  background-color: #023535;
+  border-radius: 15px;
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+h1{
+  display: flex;
+  justify-content: center;
 }
+// background-color:#89c5c5
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
+.quarta{
+  background-color: #b6d1d1;
+  border-radius: 10px;
 }
